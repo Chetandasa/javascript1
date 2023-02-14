@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- link to icon -->
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLeFLd86FtpZnr8N1D8y5ksrgxyNkZRP_RGQ&usqp=CAU">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!-- font -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
+    integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+    crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <!-- custom style sheet -->
+  <link rel="stylesheet" href="./style.css">
+  <title>Movie website CD</title>
+</head>
+
+<body>
+  <div class="container-fluid text-center">
+    <h1 style="padding-top: 50px;">Movie website</h1>
+    <hr>
+    <input id="moviesearchinputbox" class="btn btn-light" type="text" placeholder="Search Movie">
+    <hr>
+    <button button type="button" class="btn btn-dark" id="searchclickbutton" onclick="searchformovie()">click to
+      search</button>
+    <button type="button" class="btn btn-dark" id="searchclickbutton" onclick="searchforrandommovie()">random
+      movie</button>
+  </div>
+  <div class="container-fluid text-center">
+
+    <br>
+    <h1 id="sample_movietitle">Movie Title</h1>
+    <br>
+    <img id="sample_movieimage" src="https://www.themoviedb.org/t/p/original/8I37NtDffNV7AZlDa7uDvvqhovU.jpg" class="img-fluid" alt="..."
+      id="imgfromnasafetch">
+    <hr>
+    <p class="lead tagline" id="sample_tagline">
+      movie details
+    </p>
+    <hr>
+    <div class="text-center plotsummary">
+      <p class="lead">
+        plot summary
+      </p>
+      <p class="lead " id="sample_plotsummary">
+        plot summary
+      </p>
+    </div>
+    <hr>
+    <div class="text-center movieinfo">
+      <div class="row">
+        <div class="col">
+          <p id="sample_release_date">Genre</p>
+        </div>
+        <div class="col">
+          <p id="sample_revenue">Production Companies</p>
+        </div>
+        <div class="col">
+          <p id="sample_runtime">Genre</p>
+        </div>
+        <div class="col">
+          <p id="sample_vote_average">Genre</p>
+
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="text-center ">
+      <div class="row">
+        <div class="col-md-6 listnumberone">
+          <p>Genre</p>
+          <ul class="list-group" id="sample_genrelist">
+          </ul>
+        </div>
+        <div class="col-md-6 listnumberone">
+          <p>Production Companies</p>
+          <ul class="list-group" id="sample_productioncompanies">
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <p class="lead">
+      Most Popular Images
+    </p>
+    <div class="container-fluid text-center">
+      <div class="imagepadding">
+        <div class="cocoen" data-start="30">
+          <img id="cocoensliderone" src="https://www.themoviedb.org/t/p/original/tvaFREoQ7ssrPcwfz7Xbj2A7B2t.jpg"
+            alt="" />
+          <img id="cocoenslidertwo" src="https://www.themoviedb.org/t/p/original/yXsY0j90fwbfK4QVAFuQxH5LQzn.jpg"
+            alt="" />
+        </div>
+      </div>
+    </div>
+    <hr>
+    <h2 class="lead">
+      Even More Images
+    </h2>
+    <hr>
+    <div class="container-fluid text-center">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper" id="swiperwrappermain">
+
+        </div>
+        <!-- If we need pagination -->
+        <!--   <div class="swiper-pagination"></div> -->
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <!--   <div class="swiper-scrollbar"></div> -->
+      </div>
+    </div>
+    <hr>
+    <div class="container-fluid text-center websitelink">
+      <p class="lead">movie <a href="" id="moviewebsitehref">website </a></p>
+    </div>
+    <hr>
+  </div>
+
+  <div class="container-fluid text-center">
+    <h2>
+      Follow Me on <a href="https://github.com/Chetandasa">GitHub</a>
+    </h2>
+  </div>
+
+  <!-- cocoen script link  -->
+  <script src="https://unpkg.com/cocoen/dist/cocoen.js"></script>
+  <!-- Gallery swiper script link  -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  //
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+
+
+
+  <script src="./loadibraries.js"></script>
+  <script src="./sampledataobjects.js"></script>
+  <script src="./apikey.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
